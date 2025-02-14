@@ -1,0 +1,113 @@
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@700&display=swap');
+
+/* Style du logo */
+.brand-font {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('background.jpg') center/cover no-repeat;
+    color: rgb(14, 1, 1);
+}
+
+/* Style du titre du genre */
+.genre-title {
+    font-size: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Style de la description du genre */
+.genre-description {
+    font-size: 25px;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.8;
+    color: rgb(15, 15, 15);
+}
+
+/* Animation de slide pour l’apparition */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style des boxes des films */
+.movie-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+/* Animation de slide-in gauche */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Image du film */
+.movie-img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Effet zoom sur l’image au survol */
+.movie-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(255, 152, 0, 0.8);
+}
+
+/* Style des titres des films */
+.movie-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Description des films */
+.movie-description {
+    font-size: 20px;
+    opacity: 0.9;
+    color: rgb(88, 86, 86);
+}
+
+/* Note des films */
+.movie-rating {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff9800;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Animation progressive des films */
+.movie-box:nth-child(1) { animation-delay: 0.2s; }
+.movie-box:nth-child(2) { animation-delay: 0.4s; }
+.movie-box:nth-child(3) { animation-delay: 0.6s; }

@@ -1,0 +1,117 @@
+/* Style du logo */
+.brand-font {
+    font-family:'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* Supprime le soulignement et applique le clic sur toute la box */
+.genre-link {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Effet de zoom au survol */
+.genre-link:hover {
+    transform: scale(1.05);
+}
+
+
+/* Animation d’apparition des boxes */
+@keyframes fadeInUp {
+    from {
+        opacity: -1;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style général des sections */
+h2 {
+    font-family:'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Effet de survol avec scaling et glow */
+.genre-box {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Image des genres */
+.genre-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Effet d'apparition progressif */
+.genre-box:nth-child(1) { animation-delay: 0.2s; }
+.genre-box:nth-child(2) { animation-delay: 0.4s; }
+.genre-box:nth-child(3) { animation-delay: 0.6s; }
+.genre-box:nth-child(4) { animation-delay: 0.8s; }
+.genre-box:nth-child(5) { animation-delay: 1s; }
+.genre-box:nth-child(6) { animation-delay: 1.2s; }
+.genre-box:nth-child(7) { animation-delay: 1.4s; }
+.genre-box:nth-child(8) { animation-delay: 1.6s; }
+
+/* Overlay sombre avec transition */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: scale(1.2);
+}
+
+/* Texte du genre */
+.overlay h3 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.genre-box:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 20px rgba(255, 152, 0, 0.6);
+}
+
+.genre-box:hover img {
+    transform: scale(1.1);
+}
+
+.genre-box:hover .overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.genre-box:hover .overlay h3 {
+    opacity: 1;
+    transform: translateY(0);
+}

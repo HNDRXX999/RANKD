@@ -1,0 +1,86 @@
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    background: url('background.jpg') center/cover no-repeat;
+    color: rgb(19, 18, 18);
+}
+
+.container {
+    flex: 1;
+}
+
+/* Footer collé en bas */
+footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Style du logo */
+.brand-font {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* Style des labels */
+form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Style des inputs */
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ff9800; /* Bordure claire */
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #ff9800;
+    box-shadow: 0px 0px 10px rgba(255, 152, 0, 0.8);
+}
+
+/* Style des boutons */
+.btn-primary {
+    background-color: #ff9800;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #e68900;
+}
+
+/* Style du formulaire (Card) */
+.card {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #292828;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animation d'apparition */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,170 @@
+/* Importer la police utilisée dans Contact Us et Navbar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ======= Style Global ======= */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======= Navbar ======= */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    animation: none !important;  /* Supprime toute animation */
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* ======= Conteneur Principal ======= */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* ======= Box principale (Image + Texte) ======= */
+.container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    gap: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ======= Animation d'apparition ======= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======= Image Box ======= */
+.image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Effet au survol de l'image */
+.image-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Style de l'image */
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Effet zoom de l’image au survol */
+.image-box:hover img {
+    transform: scale(1.1);
+}
+
+/* ======= Box de Texte (About Us) ======= */
+.text-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.text-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre About Us */
+.text-box h2 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Texte du paragraphe */
+.text-box p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ======= Footer ======= */
+footer {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    background-color: #212529;
+    color: white;
+    margin-top: auto;
+}
+
+/* Assurer que la page occupe toute la hauteur */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenu principal qui prend toute la hauteur restante */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    gap: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+footer {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    background-color: #212529;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Garde le footer en bas si peu de contenu */
+}
